@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Registration System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Course Registration System</h1>
+
+  <div id="registration-form">
+    <h2>Student and Course Info</h2>
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" required>
+        <small class="error-message" id="firstNameError"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" required>
+        <small class="error-message" id="lastNameError"></small>
+      </div>
+
+      <!-- ✅ Updated Semester Years -->
+      <div class="form-group">
+        <label for="semester">Semester:</label>
+        <select id="semester" required>
+          <option value="">Select a semester</option>
+          <option value="Fall 2025">Fall 2025</option>
+          <option value="Spring 2026">Spring 2026</option>
+          <option value="Summer 2026">Summer 2026</option>
+        </select>
+        <small class="error-message" id="semesterError"></small>
+      </div>
+
+      <!-- ✅ Expanded Course List -->
+      <div class="form-group">
+        <label for="course">Course Name:</label>
+        <select id="course" required>
+          <option value="">Select a course</option>
+          <option value="CIS 105 - Computer Applications & IT">CIS 105 - Computer Applications & IT</option>
+          <option value="CIS 220 - Programming Fundamentals">CIS 220 - Programming Fundamentals</option>
+          <option value="CIS 308 - Data Structures">CIS 308 - Data Structures</option>
+          <option value="CIS 325 - Database Management">CIS 325 - Database Management</option>
+          <option value="CIS 425 - Enterprise Web Technologies">CIS 425 - Enterprise Web Technologies</option>
+          <option value="CIS 440 - Capstone in Information Systems">CIS 440 - Capstone in Information Systems</option>
+        </select>
+        <small class="error-message" id="courseError"></small>
+      </div>
+
+      <button type="submit" id="registerButton">Register</button>
+    </form>
+  </div>
+
+  <div id="registered-course">
+    <h2>Registered Courses</h2>
+    <table id="courseTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Semester</th>
+          <th>Course</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Registrations will appear here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
